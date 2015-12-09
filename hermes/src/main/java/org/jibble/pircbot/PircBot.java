@@ -217,7 +217,7 @@ public abstract class PircBot implements ReplyConstants {
 
             while (authStringEncoded.length() >= 400) {
                 String toSend = authStringEncoded.substring(0, 400);
-                authString = authStringEncoded.substring(400);
+                authStringEncoded = authStringEncoded.substring(400);
 
                 OutputThread.sendRawLine(this, bwriter, "AUTHENTICATE " + toSend);
             }
